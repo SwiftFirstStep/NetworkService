@@ -11,7 +11,7 @@ protocol BaseAPIServiceProtocol {
     )
 }
 
-final class BaseAPIService: BaseAPIServiceProtocol {
+final public class BaseAPIService: BaseAPIServiceProtocol {
     static let shared = BaseAPIService()
     private init() {}
     
