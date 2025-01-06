@@ -12,10 +12,10 @@ protocol BaseAPIServiceProtocol {
 }
 
 final public class BaseAPIService: BaseAPIServiceProtocol {
-    static let shared = BaseAPIService()
-    private init() {}
+    public static let shared = BaseAPIService()
+    public init() {}
     
-    func sendRequest<T: Decodable, U: Encodable>(
+    public func sendRequest<T: Decodable, U: Encodable>(
         endpoint: String,
         method: HTTPMethod = .get,
         parameters: U? = nil,
